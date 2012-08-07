@@ -1,0 +1,22 @@
+DataURI
+===
+
+Simple ["data" URI Scheme](http://tools.ietf.org/html/rfc2397) parser library.
+
+Usage
+---
+
+	$uri = <<<EOD
+	data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUA
+	AAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO
+	9TXL0Y4OHwAAAABJRU5ErkJggg==
+	EOD;
+
+	$data = Parser::parse($uri);
+	echo $data->contentType; // image/png
+	echo $data->content; // Binary PNG image data
+
+License
+---
+
+Licensed under the MIT License (http://www.opensource.org/licenses/mit-license.php)
