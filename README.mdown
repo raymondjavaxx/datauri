@@ -14,7 +14,7 @@ Usage
 
 	$data = Parser::parse($uri);
 	echo $data->contentType; // image/png
-	echo $data->content; // Binary PNG image data
+	echo $data->content; // PNG binary data
 
 License
 ---
